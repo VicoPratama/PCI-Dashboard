@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+/* Container Styling */
+.container {
+    display: flex; /* Flexbox ensures horizontal splitting */
+    width: 80%; /* Adjust the width of the container */
+    max-width: 1200px; /* Limit the width for larger screens */
+    height: 80vh; /* Adjust the height of the container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Prevent child content from spilling out */
+    background-color: white;
+}
+
+/* Left and Right Section Styling */
+.left, .right {
+    flex: 1; /* Both take up 50% of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left {
+    background-color: #f9f9f9; /* Light background for the left side */
+    border-right: 2px solid #f0f0f0; /* Visual divider between sections */
+}
+
+.right {
+    background-color: white;
+}
+
+/* Title Styling for Left Section */
+.main-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Login Box Styling */
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Fields Styling */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login Button Styling */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Signup Text */
+.signup {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.signup a {
+    color: #007bff;
+    text-decoration: none;
+}
