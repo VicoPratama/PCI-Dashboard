@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Files</title>
+    <style>
+        /* CSS Styles */
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+/* Container Styling */
+.container {
+    display: flex; /* Flexbox ensures horizontal splitting */
+    width: 80%; /* Adjust the width of the container */
+    max-width: 1200px; /* Limit the width for larger screens */
+    height: 80vh; /* Adjust the height of the container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Prevent child content from spilling out */
+    background-color: white;
+}
+
+/* Left Sidebar Styling */
+.left {
+    flex: 0.3;
+    background-color: #f9f9f9;
+    border-right: 2px solid #f0f0f0;
+    padding: 20px;
+}
+
+.sidebar {
+    list-style-type: none;
+}
+
+.sidebar li {
+    font-size: 1rem;
+    padding: 15px 20px;
+    margin: 10px 0;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar li:hover, .sidebar .active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+}
+
+.sidebar li:first-child {
+    margin-top: 0;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.main-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+        .sidebar {
+            width: 250px;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin: 15px 0;
+            cursor: pointer;
+        }
+
+        .sidebar nav ul li:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead th {
+            text-align: left;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        tbody td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        button {
+            margin-right: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.approve {
+            background-color: green;
+            color: white;
+        }
+
+        button.delete {
+            background-color: red;
+            color: white;
+        }
+
+        button.edit {
+            background-color: #f0ad4e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="profile-pic"></div>
+                <p>Profile Name</p>
+            </div>
+            <nav>
+                <ul>
+                    <li>Customer List</li>
+                    <li>Ongoing Project</li>
+                    <li>Project Report</li>
+                    <li>Reminders</li>
+                    <li>Settings</li>
+                    <li>Sign Out</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>My Files</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Uploaded By</th>
+                        <th>File Size</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample Data -->
+                    <tr>
+                        <td>Smelter.png</td>
+                        <td>Gusfan poon</td>
+                        <td>12 MB</td>
+                        <td>
+                            <button class="approve">Approve</button>
+                            <button class="delete">Delete</button>
+                            <button class="edit">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Smelter.png</td>
+                        <td>Gusfan poon</td>
+                        <td>12 MB</td>
+                        <td>
+                            <button class="approve">Approve</button>
+                            <button class="delete">Delete</button>
+                            <button class="edit">Edit</button>
+                        </td>
+                    </tr>
+                    <!-- Repeat rows as needed -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script>
+        // JavaScript for Interaction
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const approveButtons = document.querySelectorAll('.approve');
+            const deleteButtons = document.querySelectorAll('.delete');
+            const editButtons = document.querySelectorAll('.edit');
+
+            approveButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('File approved!');
+                });
+            });
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('File deleted!');
+                });
+            });
+
+            editButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Edit file details!');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
