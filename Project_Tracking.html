@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tracking Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="left">
+            <ul class="sidebar">
+                <li>Profile Name</li>
+                <li>Customer List</li>
+                <li>Product Stock</li>
+                <li class="active">Project Tracking</li>
+                <li>Project Report</li>
+                <li>Reminders</li>
+                <li>Settings</li>
+                <li>Sign Out</li>
+            </ul>
+        </div>
+        
+        <!-- Right Content -->
+        <div class="right">
+            <div class="content">
+                <h1>Project Tracking</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search here...">
+                    <select>
+                        <option>Sort by</option>
+                        <option>Project Name</option>
+                        <option>Status</option>
+                        <option>Comments</option>
+                    </select>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Project</th>
+                            <th>Project Details</th>
+                            <th>Status</th>
+                            <th>Comments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Project 1</td>
+                            <td>Details 1</td>
+                            <td>Finished</td>
+                            <td>Comment 1</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Project 2</td>
+                            <td>Details 2</td>
+                            <td>Ongoing</td>
+                            <td>Comment 2</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Project 3</td>
+                            <td>Details 3</td>
+                            <td>Finished</td>
+                            <td>Comment 3</td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>Project 4</td>
+                            <td>Details 4</td>
+                            <td>Canceled</td>
+                            <td>Comment 4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="add-btn">Add Projects</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
